@@ -57,6 +57,9 @@
 .bus:hover{
     box-shadow:200px 0 0 0 rgba(0,0,0,0.5) inset;
 }
+.bup:hover{
+    box-shadow:200px 0 0 0 rgba(0,0,0,0.5) inset;
+}
 
 #view1{
     display: none;
@@ -65,6 +68,9 @@
     display:none;
 }
 #view3{
+    display:none
+}
+#view4{
     display:none
 }
 

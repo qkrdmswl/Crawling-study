@@ -24,10 +24,16 @@ def index():
     any_temps = soup.find('span', "todaytemp").get_text()
     any_cast = soup.find('p', "cast_txt").get_text()
 
+
     webpage3 = urllib.request.urlopen('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%B6%80%EC%82%B0%EB%82%A0%EC%94%A8')
     soup = BeautifulSoup(webpage3, 'html.parser')
     bus_temps = soup.find('span', "todaytemp").get_text()
     bus_cast = soup.find('p', "cast_txt").get_text()
+
+    webpage4 = urllib.request.urlopen('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%B6%80%ED%8F%89%EB%82%A0%EC%94%A8')
+    soup = BeautifulSoup(webpage4, 'html.parser')
+    bup_temps = soup.find('span', "todaytemp").get_text()
+    bup_cast = soup.find('p', "cast_txt").get_text()
 
     return render_template('index.html', 
     nowDate=nowDate, 
@@ -36,7 +42,9 @@ def index():
     any_temps=any_temps,
     any_cast=any_cast,
     bus_temps=bus_temps,
-    bus_cast=bus_cast)
+    bus_cast=bus_cast,
+    bup_temps=bup_temps,
+    bup_cast=bup_cast)
 
 
 
