@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Weather Inform</title>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button[class='btn any']").click(function(){
+                $("div[id='view1']").fadeIn(0);
+                $("div[id='view2']").fadeOut(0);
+                $("div[id='view3']").fadeOut(0);
+            });
+            $("button[class='btn seo']").click(function(){
+                $("div[id='view1']").fadeOut(0);
+                $("div[id='view2']").fadeIn(0);
+                $("div[id='view3']").fadeOut(0);
+            });
+            $("button[class='btn bus']").click(function(){
+                $("div[id='view2']").fadeOut(0);
+                $("div[id='view3']").fadeIn(0);
+                $("div[id='view1']").fadeOut(0);
+            });
+        });
+    </script>
+  
+</head>
+<body>
+    <div class="header">
+        <h1 class="main-text">안녕하세요! 현재 
+            <div class="main-date">{{nowDate}}</div>
+        </h1>
+    </div>
+
+    <div class="option-btn">
+        <button class="btn any">안양 날씨</button>
+        <div id="view1">현재 안양 날씨 : {{any_temps}}°C {{any_cast}}</div>
+        <button class="btn seo">서울 날씨</button>
+        <div id="view2">현재 서울 날씨 : {{seo_temps}}°C {{seo_cast}}</div>
+        <button class="btn bus">부산 날씨</button>
+        <div id="view3">현재 부산 날씨 : {{bus_temps}}°C {{bus_cast}}</div>
+    </div>
+    
+   
+</body>
+</html>

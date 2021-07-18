@@ -1,0 +1,70 @@
+@font-face{
+    font-family: "ttobak";
+    src: url("../css/fonts/나눔손글씨\ 또박또박.ttf");
+}
+.header{
+    justify-content: center;
+    text-align: center;
+}
+
+.main-text{
+    font-size: 38px;
+    font-family: "ttobak";
+}
+
+.main-date{
+    font-size: 38px;
+    font-family: "ttobak";
+}
+
+.main-date:hover{
+    color:rgb(200, 144, 252);
+}
+.option-btn{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.btn{
+    display:block; 
+    width:200px; 
+    height:40px; 
+    line-height:40px; 
+    border:1px #3399dd solid; 
+    margin:15px auto; 
+    background-color:#66aaff; 
+    text-align:center; 
+    cursor: pointer; 
+    color:#333; 
+    transition:all 0.9s, color 0.3;
+    font-size: 30px;
+    font-family: "ttobak";
+}
+.btn:hover{
+    color: #fff;
+}
+
+.any:hover{
+    box-shadow:200px 0 0 0 rgba(0,0,0,0.5) inset;
+}
+
+.seo:hover{
+    box-shadow:200px 0 0 0 rgba(0,0,0,0.5) inset;
+}
+
+.bus:hover{
+    box-shadow:200px 0 0 0 rgba(0,0,0,0.5) inset;
+}
+
+#view1{
+    display: none;
+}
+#view2{
+    display:none;
+}
+#view3{
+    display:none
+}
+
